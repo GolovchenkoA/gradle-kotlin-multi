@@ -25,3 +25,16 @@ tasks.register<JarCount>("countJars") {
 
     countFile.set(layout.buildDirectory.file("gen/count.txt"))
 }
+
+tasks.build {
+    dependsOn(tasks.named("bundle"))
+}
+
+// add a new lifecycle task
+tasks.register("buildAll") {
+    group = "build"
+    description = "build all"
+
+    dependsOn(tasks.build)
+    dependsOn(tasks.named("countJars"))
+}
