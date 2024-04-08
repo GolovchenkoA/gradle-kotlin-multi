@@ -3,8 +3,6 @@
  */
 package org.example
 
-import MessageModel
-
 class App {
     val greeting: String
         get() {
@@ -14,5 +12,5 @@ class App {
 }
 
 fun main() {
-    println(App().greeting)
+    MessageService.print(MessageModel("Hello World!"))
 }

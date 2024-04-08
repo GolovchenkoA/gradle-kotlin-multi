@@ -32,6 +32,7 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
 
+    implementation(project(":business-logic"))
     implementation(project(":data-model"))
 }
 
