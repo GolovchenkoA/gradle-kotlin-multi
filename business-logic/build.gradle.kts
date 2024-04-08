@@ -18,3 +18,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+// Configuring all tasks with a type. See: tasks.compileJava {}
+//tasks.withType<JavaCompile>().configureEach {
+//}
