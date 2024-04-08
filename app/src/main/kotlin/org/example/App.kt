@@ -3,10 +3,13 @@
  */
 package org.example
 
+import MessageModel
+
 class App {
     val greeting: String
         get() {
-            return "Hello World!"
+            val msg = MessageModel("Hello World!")
+            return msg.text
         }
 }
 

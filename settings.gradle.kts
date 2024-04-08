@@ -25,4 +25,4 @@ plugins {
 
 
 rootProject.name = "gradle-multi"
-include("app")
+include("app", "data-model")
