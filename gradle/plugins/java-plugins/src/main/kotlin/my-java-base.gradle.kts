@@ -9,3 +9,18 @@ java {
         languageVersion = JavaLanguageVersion.of(21)
     }
 }
+
+tasks.test {
+    useJUnitPlatform()
+    maxParallelForks = 8
+    maxHeapSize = "1gb"
+}
+
+sourceSets.create("integrationTests")
+
+tasks.register<Test>("integrationTest") {
+    testClassesDirs = sourceSets["integrationTest"].output.classesDirs
+    classpath = sourceSets["integrationTest"].runtimeClasspath
+
+    useJUnitPlatform()
+}

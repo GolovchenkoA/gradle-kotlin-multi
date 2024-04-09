@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("my-java-base")
 }
 
 group = "org.example"
@@ -13,10 +13,10 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation(project(":data-model"))
-}
+    integrationTestsImplementation("org.junit.jupiter:junit-jupiter-api")
+    integrationTestsRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
-tasks.test {
-    useJUnitPlatform()
+
 }
 
 // Configuring all tasks with a type. See: tasks.compileJava {}
