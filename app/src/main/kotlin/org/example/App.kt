@@ -13,4 +13,11 @@ class App {
 
 fun main() {
     MessageService.print(MessageModel("Hello World!"))
+    val person = Person("Alice", 29)
+    println(person.description)
+    person.age = 2
+    println(person.description)
+
+    person.city = "NY"
+    println(person.city)
 }
