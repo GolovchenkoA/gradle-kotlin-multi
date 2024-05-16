@@ -54,7 +54,14 @@ fun main() {
         println("htmlFun2 println it number: ${it.returnNumber()}")
 //        println("htmlFun2 println this: $this") // is not allowed
     }
+
+    myHtmlFunNotImplemented {
+
+    }
 }
+
+private val myLambdaMultiply = {x: Int -> x * x}
+private val myLambdaSum: (Int, Int) -> Int = { x: Int, y: Int -> x + y}
 
 fun findSquare() : (Int) -> Int = {it * it}
 fun findSquare2(i: Int): Int {return i * i}
@@ -96,3 +103,7 @@ fun htmlFun2(htmlLambda: (HTML) -> Unit): HTML {
     htmlLambda.invoke(html)
     return html
 }
+
+//https://kotlinlang.org/docs/lambdas.html#function-types
+//https://kotlinlang.org/docs/lambdas.html#function-literals-with-receiver
+fun myHtmlFunNotImplemented(htmlMethodCall: HTML.() -> Unit): HTML.() -> Unit = htmlMethodCall

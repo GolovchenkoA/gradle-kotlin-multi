@@ -16,11 +16,11 @@ tasks.test {
     maxHeapSize = "1gb"
 }
 
-sourceSets.create("integrationTests")
+//sourceSets.create("integrationTests")
 
-tasks.register<Test>("integrationTest") {
-    testClassesDirs = sourceSets["integrationTest"].output.classesDirs
-    classpath = sourceSets["integrationTest"].runtimeClasspath
-
-    useJUnitPlatform()
-}
+//tasks.register<Test>("integrationTest") {
+//    testClassesDirs = sourceSets["integrationTest"].output.classesDirs
+//    classpath = sourceSets["integrationTest"].runtimeClasspath
+//
+//    useJUnitPlatform()
+//}

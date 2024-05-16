@@ -6,7 +6,17 @@
  */
 
 pluginManagement {
-    repositories.gradlePluginPortal()
+
+    plugins {
+        id("org.example.openapi-gradle-plugin")
+    }
+
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+    }
+//    repositories.mavenLocal()
+//    repositories.gradlePluginPortal()
     // repositories.mavenCentral()
     // repositories.google()
     // repositories.maven("https://my.location/repo") {
@@ -21,6 +31,7 @@ pluginManagement {
 plugins {
     // Apply the foojay-resolver plugin to allow automatic download of JDKs
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
+//    id("org.example.openapi-gradle-plugin")
 }
 
 

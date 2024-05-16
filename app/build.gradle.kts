@@ -45,3 +45,40 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.register("print1") {
+    group = "this project tasks"
+    doLast{
+        println("This task should be executed first print1")
+//        Thread.sleep(10000)
+//        println("This task should be executed first print1")
+    }
+
+
+    if(project.hasProperty("prop1")) {
+        println("Prop 1 value is: ${project.property("prop1")}")
+    }
+}
+
+tasks.register("print2") {
+    group = "this project tasks"
+    dependsOn("print1")
+//        it.dependsOn(firstTask2)
+    doLast{
+        println("This task should be executed last print2")
+    }
+//    Thread.sleep(10000)
+//    println("This task should be executed last print2")
+}
+
+tasks.register("hello") {
+    doLast {
+        println("Hello world!")
+    }
+}
+tasks.register("intro") {
+    dependsOn("hello")
+    doLast {
+        println("I'm Gradle")
+    }
+}

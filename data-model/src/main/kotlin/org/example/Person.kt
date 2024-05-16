@@ -3,7 +3,7 @@ package org.example
 class Person(val name: String, var age: Int) {
 
     init {
-        age *= 2
+//        age *= 2
     }
 
     val description: String
@@ -20,4 +20,6 @@ class Person(val name: String, var age: Int) {
     constructor(email: String) : this("Default name", 100) {
         //do something
     }
+
+    override fun toString(): String { return "$name is $age"}
 }

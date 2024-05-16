@@ -20,4 +20,7 @@ fun main() {
 
     person.city = "NY"
     println(person.city)
+
+//    VisibilityTutorialsKotlin()
+//    VisibilityTutorialsJava
 }

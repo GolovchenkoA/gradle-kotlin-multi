@@ -13,8 +13,8 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation(project(":data-model"))
-    integrationTestsImplementation("org.junit.jupiter:junit-jupiter-api")
-    integrationTestsRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+//    integrationTestsImplementation("org.junit.jupiter:junit-jupiter-api")
+//    integrationTestsRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
 
 }
